@@ -24,6 +24,7 @@
     <ProjectGuid>{03a7be52-21dc-4a1d-9a2b-144db9e7742e}</ProjectGuid>
     <RootNamespace>SmallestCommonMultiple</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>LeastCommonMultiple</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,7 +128,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SmallestCommonMultiple.cpp" />
+    <ClCompile Include="LeastCommonMultiple.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GreatestCommonDivisor\GreatestCommonDivisor.vcxproj">
+      <Project>{e03735cf-752e-44dc-b8c9-c0c4e90b56a9}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

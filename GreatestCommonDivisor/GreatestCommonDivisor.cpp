@@ -1,10 +1,24 @@
 #include <iostream>
 using namespace std;
 
+int greatestCommonDiv(int b, int a)
+{
+	int c = b % a;
+
+	while (c != 0)
+	{
+		b = a;
+		a = c;
+		c = b % a;
+	}
+
+	return a;
+}
+
 int main()
 {
 
-	int i;
+	/*int i;
 	int firstNumber;
 	int secondNumber;
 
@@ -32,7 +46,26 @@ int main()
 			}
 		}
 
-	}
+	}*/
 
+	int firstNumber;
+	int secondNumber;
+
+	while (true)
+	{
+		cout << "firstNumber = "; cin >> firstNumber;
+		cout << "secondNumber = "; cin >> secondNumber;
+		int gcd;
+
+		if (firstNumber > secondNumber)
+			gcd = greatestCommonDiv(firstNumber, secondNumber);
+		else
+			gcd = greatestCommonDiv(secondNumber, firstNumber);
+
+		cout << "gcd: " << gcd << endl;
+		cout << endl;
+
+	}
 	return 0;
 }
+
